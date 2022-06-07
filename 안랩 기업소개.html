@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>웹 프로그래밍 과제 : 안랩(AhnLab) 기업소개</title>
+	<style type="text/css">
+		@import url(mystyle.css);
+	</style>
+	<script type="text/javascript" src="myjs.js"></script>
+</head>
+<body onload="init();insite()">
+		<a href="#" onclick="window.location.reload()"><img class="logo"src="AhnLablogo.png"></a>
+		<ul class="menu">
+      <li>
+        <a href="#" onclick="openmain(0)">기업소개</a>
+        <ul class="submenu">
+          <li><a href="#" onclick="opensub(0,0)">기업개요</a></li>
+          <li><a href="#" onclick="opensub(0,1)">기업가치</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" onclick="openmain(1)">직무소개</a>
+        <ul class="submenu">
+          <li><a href="#" onclick="opensub(1,0)">소프트웨어 연구개발</a></li>
+          <li><a href="#" onclick="opensub(1,1)">대응/분석</a></li>
+          <li><a href="#" onclick="opensub(1,2)">보안 컨설팅</a></li>
+          <li><a href="#" onclick="opensub(1,3)">보안관제/CERT</a></li>
+          <li><a href="#" onclick="opensub(1,4)">기술지원</a></li>
+          <li><a href="#" onclick="opensub(1,5)">마케팅</a></li>
+          <li><a href="#" onclick="opensub(1,6)">제품기획</a></li>
+          <li><a href="#" onclick="opensub(1,7)">영업</a></li>
+          <li><a href="#" onclick="opensub(1,8)">UX</a></li>
+          <li><a href="#" onclick="opensub(1,9)">IT 서비스</a></li>
+          <li><a href="#" onclick="opensub(1,10)">홍보</a></li>
+          <li><a href="#" onclick="opensub(1,11)">재무</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" onclick="openmain(2)">인재채용</a>
+        <ul class="submenu">
+          <li><a href="#" onclick="opensub(2,0)">인재상</a></li>
+          <li><a href="#" onclick="opensub(2,1)">채용절차</a></li>
+          <li><a href="#" onclick="load('https://ahnlab.recruiter.co.kr/app/jobnotice/list')">채용공고 바로가기</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" onclick="openmain(3)">복지</a>
+        <ul class="submenu">
+          <li><a href="#" onclick="opensub(3,0)">보상</a></li>
+          <li><a href="#" onclick="opensub(3,1)">복리후생</a></li>
+          <li><a href="#" onclick="load('https://company.ahnlab.com/kr/recruit/personnel_welfare.do')">복지 바로가기</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" onclick="openmain(4)">로고 그리기</a>
+        <ul class="submenu">
+          <li><a href="#" onclick="opendiv(4);change('AhnLablogo.png')">기업로고</a></li>
+          <li><a href="#" onclick="opendiv(4);change('V3이미지.png')">V3</a></li>
+        </ul>
+      </li>
+    </ul>
+	<hr>
+	<div></div>
+	<div class="maindiv" name="메인화면">
+		<span>
+			<center><h2>작성자</h2></center>
+			<hr>
+			<center>
+			<h3>소속:</h3>공주대학교 공과대학 소프트웨어학과
+			<h3>이름:</h3>201801782 오승민
+			<br>
+			</center>
+		</span>
+		<span style="background-color: rgba(255, 255, 153, 0.5);">
+			<center><h2>기업선정 이유</h2></center>
+			<hr>
+			<h4>1. 정보보안 분야로 진로를 생각하고 있어 과제와 진로탐색을 함께 하기위해서 선정하였습니다.</h4>
+			<h4>2. 정보보안 분야에서 업계 1위이기 때문에 안랩을 선정하였습니다.</h4>
+			<h4>3. V3 백신, 설립자인 안철수라는 키워드는 보안에 관심없는 사람도 흥미를 가질만한 소재라고 생각하였습니다.</h4>
+		</span>
+	</div>
+	<div class="maindiv" name="메인화면">
+		<span style="background-color: rgba(204, 255, 205, 0.5);">
+			<center><h2>기업소개 중점</h2></center>
+			<hr>
+			<h4>기업소개 중점으로는 대학생들은 어떤 정보에 관심이 있는지 원하는지 생각해보아 기업소개 보다 취업과 관련된 직무, 채용, 복지에 조금더 비중을 두어 홈페이지를 작성하였습니다.</h4>
+		</span>
+		<span style="background-color: rgba(255, 204, 204, 0.5);">
+			<center><h2>안랩 사이트 이동</h2></center>
+			<hr>
+			<center>
+			<h3 id="site1" title="3초 동안 마우스를 올리면 이동됩니다." onmouseover="site1(3000)" onmouseout="cancel()">안랩 공식사이트</h3>
+			<h3 id="site2" title="3초 동안 마우스를 올리면 이동됩니다." onmouseover="site2(3000)" onmouseout="cancel()">안랩 기업사이트</h3>
+			</center>
+		</span>
+	</div>
+	<div class="div" name="기업소개">
+		<h2>기업소개</h2>
+			<details class="0" open>
+				<summary>기업개요</summary>
+				<p class="content">안랩은 1995년, 백신 소프트웨어 전문 개발 회사로서 보안업계에 첫발을 디딘 이래 지금까지 한국을 대표하는 정보보안 기업으로 고객의 소중한 IT자산을 보호하기 위해 엔드 포인트부터 네트워크에 이르기까지 다양한 보안 솔루션 및 서비스를 제공하는 기업입니다.</p>
+				<p class="content">안랩은 글로벌 통합보안 기업으로서 세계수준의 기술력으로 개발한 솔루션과 전문적인 서비스 체계를 갖춘 기업으로 컨설팅-솔루션-관제 등 시큐리티 라이프 사이클 상의 기술과 서비스를 자체 역량으로 제공하는 세계적인 보안업체입니다.</p>
+				<p class="content">안랩은 세계적인 기술력을 보유한, 국내 보안 업계에서 가장 오랜 역사와 가장 큰 규모를 가진 업체로 세계적으로 정보보안 시장이 형성되기 시작한 1988년 부터 쌓은 정보보안 노하우를 기반으로 시장을 개척해왔으며, 설립 이래 꾸준한 매출 성장을 보여 국내 보안 업계 선두를 유지하는 한편 역동적으로 글로벌 시장에 진출해 성공 사례를 만들어 가고 있습니다.</p>
+				<p class="content">1998년 12월 국내 보안 업계 최초로 중국 공안부 인증을 획득한 것을 필두로 주요 5대 국제 인증인 VB100, AV-TEST, AV-Comparatives, Check Mark, ICSA 등을 모두 획득해 국제적으로 기술력을 공인받고 있습니다.</p>
+				<p class="content">안랩은 벤처 기업이 받을 수 있는 최고 영예인'동탄산업훈장'을 비롯해 '대한민국특허기술대전 은상' '한국에서 가장 존경받는 기업' '경제정의기업상' 등 기술력과 윤리 경영 측면에서 공인 받는 기업입니다.</p>
+				<p class="content">또한, 국내뿐 아니라 세계적으로 인정받아 'Asiamoney Awards Best Newly listed Company'(홍콩 Asiamoney), '한국 베스트 직장-5위'(휴잇 어소시엇츠, 아시안월스트리트저널), 대통령 표창 및 대한민국 인터넷대상 대통령상 등을 수상했습니다.</p>
+			</details>
+			<hr>
+			<details class="0" open>
+				<summary>기업가치</summary>
+				<h3>브랜드 평판 1위</h3>
+				<p class="content">안랩의 2022년 5월 소프트웨어 상장기업 브랜드 평판 분석은 55개 기업중 1위입니다.<br>
+				<이미지에 마우스를 올리면 확대됩니다>
+					<div><img class="img1"src="안랩 브랜드 평판지표.jpg" alt="이미지 없음"><div>
+				</p>
+				<h3>성장하는 기업가치</h3>
+				<p class="content">안랩의 연간 재무재표를 확인 하면 매출액과 영업이익, 기업 보유자산이 지속적으로 상승하고 있습니다.<br>
+				<이미지에 마우스를 올리면 확대됩니다>
+					<div><img class="img1"src="안랩 연간 재무재표.png" alt="이미지 없음"><div>
+				</p>
+			</details>
+	</div>
+	<div class="div" name="직무소개">
+		<h2>직무소개</h2>
+		<details class="1" open>
+			<summary>소프트웨어 연구개발</summary>
+			<p class="content">Windows/Linux 환경에서 보안프로그램 개발, Application 개발, System Programming, Web 개발 등을 수행하게 되며, 안랩 직원 중 40% 이상이 연구개발 분야에서 활약하고 있습니다. 또한 국내 최대 소프트웨어 기업으로서 완벽한 개발 프로세스를 보유하고 있으며, 다양한 세부 직무가 형성되어 있어 개발자라면 누구나 꿈꾸는 다양한 커리어를 보장합니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>대응/분석</summary>
+			<p class="content">대응팀이 실시간 수집한 신종 악성코드 샘플은 분석팀으로 인계되어 새로운 치료 엔진으로 개발됩니다. 거대한 퍼즐 맞추기와 같은 분석 작업은 고도의 집중력과 창의력 및 분석적 사고를 필요로 합니다만 그 만큼의 짜릿한 보람도 느낄 수 있는 직무입니다. 안랩의 글로벌 보안 대응 조직이 대한민국을 안전한 인터넷 세상으로 만들어 나갑니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>보안 컨설팅</summary>
+			<p class="content">정보보호컨설팅 및 SI(Security Integrity)에 대한 전반적이고 전문적인 지식을 기반으로, 정보보호 관점에서 고객 니즈를 분석하고 이를 해결할 수 있는 정보보호 솔루션을 제시하여 사업발굴을 주도하고 정보보호컨설팅 및 보안시스템통합구축 업무를 수행합니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>보안관제/CERT</summary>
+			<p class="content">보안관제 서비스는 증가하는 보안위협으로부터 기업의 정보자산을 효율적으로 보호하고 나아가 고객이 핵심 역량에 집중할 수 있도록 고객의 보안 솔루션에 대한 운영/관리를 제공하는 선진화된 IT 보안서비스입니다. 기업 해킹 등의 침해사고를 예방하고 긴급대응하기 위한 조직으로 파견관제와 원격관제(CERT)로 구분됩니다. 3교대 근무로 365일 24시간 철통 보안을 유지하며, 국가 사이버 대란 시에도 금융기관, 민간기업, 국가기관 등을 빈틈 없이 지켜내고 있습니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>기술지원</summary>
+			<p class="content">Network Application 보안장비제품, MS Windows 제품군에 AV제품을 공급하기 위한 고객사 설치지원/교육/유지보수 업무를 통해 악성코드 등의 보안위협에 피해를 최소화하도록 기술을 지원하는 보람 넘치는 업무를 수행합니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>마케팅</summary>
+			<p class="content">브랜드 인지도와 시장 경쟁력 강화에 기여하기 위한 중장기 전략 및 각종 브랜드 마케팅 전략과 핵심 서비스 광고 전략을 수립하고 온/오프라인 광고, 프로모션 활동을 추진합니다. 또한 기존 고객 유지관리, 신규시장 개척을 위해 노력합니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>제품기획</summary>
+			<p class="content">각종 자료, 시장, 트렌드 분석 등의 연구활동을 바탕으로 새로운 사업전략/컨셉/방향/사업모델 등을 수립하고, 신성장동력 발굴 및 시장 개척을 통해 IT 패러다임을 주도해 나갑니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>영업</summary>
+			<p class="content">보안시장 예측/분석을 통해 미래의 시장 트랜드를 파악하고, 고객 니즈를 만족시키는 다양한 상품을 기획하며, 인적 네트워크를 통해 해당 고객에게 맞는 최적의 제품을 제안 함으로써 이를 매출로 연결시키는 업무를 수행합니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>UX</summary>
+			<p class="content">브랜드 이미지 강화와 사용성 향상을 위해 동향 분석, 사용자 분석, 서비스 분석을 진행하고 그 결과를 기반으로 UX 전략을 수립합니다. 또한 인터랙션 디자인, 사용성테스트, 비주얼 디자인을 통해 사용자의 니즈를 만족시키기 위한 최적의 솔루션을 디자인합니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>IT 서비스</summary>
+			<p class="content">사내 제공되는 IT 인프라를 안정적으로 유지하기 위해 네트크, 서버, 그룹웨어 등의 시스템을 구축하고 전 임직원이 고유 영역에 집중할 수 있도록 지속적으로 IT 서비스를 관리하고 개선합니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>홍보</summary>
+			<p class="content">대내외 커뮤니케이션을 통해 내/외부의 가치 있는 정보를 수집하여 이해관계자에게 정확히 제공하고, 지역과 사회를 위한 기여활동과 봉사 활동을 통해 신뢰받고 존경받는 기업으로서의 건전한 위상을 만들어 갑니다.</p>
+		</details>
+		<hr>
+		<details class="1" open>
+			<summary>재무</summary>
+			<p class="content">재무 전략과 계획을 수립하고, 재무 자원을 효율적으로 조달, 분배, 운용하여 재무성과와 위험을 효과적으로 관리하며 필요한 재무 정보를 정확하게 제공함으로써 주주가치 향상과 경영진의 의사결정을 지원합니다.</p>
+		</details>
+	</div>
+	<div class="div" name="인재채용">
+		<details class="2" open>
+			<summary>인재상</summary>
+			<h2>A형 인재</h2>
+				<span>
+				<h4>1.전문성</h4>안랩인은 각자가 자기분야의 전문가입니다. 꾸준한 자기개발을 통한 최고전문가로 성장합니다.
+				<h4>2.인성</h4>안랩인에게 요구되는 개인 소양은 타고나는 것이 아닌 끊임없는 자기 통제와 노력을 통한 마음자세입니다. 
+				<h4>3.팀웍</h4>전문성과 인성을 갖춘 인재는 스스로 성장하기보다 조직과 함께 성장하고 기여하는데서 큰 행복을 느낍니다.
+				</span>
+				<img src="https://image.ahnlab.com/company/images/common/recruit/img_ideal.jpg" style="width: 30%; height: 300px;">
+		</details>
+			<hr>
+		<details class="2" open>
+			<summary>채용절차</summary>
+			<h3>1.경력채용</h3>
+			<strong>모집시기:</strong> 상시 모집
+			<img src="https://image.ahnlab.com/company/images/kr/img_exp.jpg">
+			<h3>2.신입채용(채용전제형 인턴)</h3>
+			<strong>모집시기:</strong> R&D(5월/11월), 비R&D(1월/7월)
+			<img src="https://image.ahnlab.com/company/images/kr/img_new.jpg">
+		</details>
+	</div>
+	<div class="div" name="복지">
+		<details class="3" open>
+			<summary>보상</summary>
+			<h2>보상 체계</h2>
+			<p class="content">
+				안랩은 매년 임금수준을 조사하여 업계 상위 수준의 보상을 유지하고 있습니다. 공정하고 체계적인 평가체계를 기반으로 성과와 역량 수준을 반영한 기본 연봉과 전사 경영성과에 따른 인센티브, 자기개발, 건강, 여가활동을 지원하는 복리후생제도 등 최적의 보상체계가 구성되어 있습니다.
+			</p>
+			<img src="https://image.ahnlab.com/company/images/kr/img_reward01.jpg" style="width: 50%; height: 50%;">
+			<h2>ASSA</h2>
+			<p class="content">
+				ASSA(AhnLab self-service area)는 안랩 고유의 복지제도로 원하는 복리후생 항목을 스스로 선택하여 활용하고자는 취지로 설계되었습니다. 개인 뿐 아니라 가족까지 그 활용 범위를 넓힘으로써 안랩인의 삶의 질과 긍지를 높여주고 있습니다.
+			</p>
+			<img src="https://image.ahnlab.com/company/images/kr/img_reward02.jpg" style="width: 50%; height: 50%;">
+		</details>
+		<hr>
+		<details class="3" open>
+			<summary>복리후생</summary>
+			<h2>복리후생</h2>
+			<span style="width: 100%;">
+			<h3>안정된 생활을 지원</h3>
+			건강검진, 직원대출제도, 각종 경조사 지원, 단체 상해보험, 체력단련실운영, 업무활동비 지급, 문화생활비, 결혼준비 지원, 선택적복리후생, 자녀학자금
+
+			<h3>직원들의 열정에 보답</h3>
+			퇴직연금, 인센티브제, 장기근속자 포상, 우수사원포상, 퇴직금, 성과급, 4대 보험
+
+			<h3>우리 회사만의 특별한 복지</h3>
+			명절선물/귀향비, 창립일선물지급
+
+			<h3>직원들의 자기계발을 존중</h3>
+			창립일행사, 우수사원시상식, 워크샵, 플레이샵, 신입사원교육(OJT), 직무능력향상교육, 리더쉽강화교육, 도서구입비지원, 멘토링제도, 외국어 교육 지원, 사이버연수원운영, 자격증취득지원, 교육비 지원, 구내식당(사원식당), 사내동호회 운영, 사우회(경조사회), 음료제공(차, 커피)
+
+			<h3>편안하게 일할 수 있는 최선의 환경을 제공</h3>
+			사내 어린이집 운영, 휴게실, 회의실, 카페테리아, 게임기, 전용 사옥, 사내 정원, 노트북, 사원증, 자회사 제품할인, 콘도/리조트 이용권, 사무용품 지급
+
+			<h3>직원 중심의 조직문화</h3>
+			회식강요 안함, 야근강요 안함, 자유복장
+
+			<h3>직원들의 편의를 위한 출퇴근과 다양한 근무 제도를 제공</h3>
+			탄력근무제
+
+			<h3>최고의 복지는 휴가</h3>
+			연차, 경조휴가제, 반차, 창립일휴무, 근로자의 날 휴무, 포상휴가, 산전 후 휴가, 육아휴직, 남성출산휴가, 보건휴가, 휴양시설 제공
+			</span>
+		</details>
+	</div>
+	<div class="div" name="그리기">
+		<div style="margin-top: 30px;">
+			<h3>로고 그리기</h3>
+			<canvas id="myCanvas" style="background-color: aliceblue" width="600" height="400"></canvas>
+			<form>
+				선굵기:<input id="lineWidth"type="text" value="3">
+				선 색:<input id="textcolor"type="color" value="#00ff00">
+				로고 이미지 변경:
+				<button onclick="erase()">지우기</button>
+				<button onclick="change('AhnLablogo.png')">안랩 로고</button>
+				<button onclick="change('V3이미지.png')">V3</button>
+			</form>
+		</div>
+		<div>
+			<img id="image" src="AhnLablogo.png">
+		</div>
+	</div name="테이블">
+		<table id="table">
+		<tr><th colspan="2"><center><h2>안랩</h2>AhnLab,lnc.</center></th></tr>
+		<tr><td colspan="2"><img src="AhnLablogo.png"></td></tr>
+		<tr><th>국가</th><td>대한민국</td></tr>
+		<tr><th>창업자</th><td>안철수</td></tr>
+		<tr><th>설립일</th><td>1995년 3월 18일</td></tr>
+		<tr><th>전신</th><td>안철수연구소</td></tr>
+		<tr><th>업종명</th><td>시스템 소프트웨어 개발 및 공급</td></tr>
+		<tr><th>기업규모</th><td>중견기업</td></tr>
+		<tr><th>대표자</th><td>강석균</td></tr>
+		<tr><th>상장여부</th><td>상장(코스닥,코스닥 프리미어)</td></tr>
+		<tr><th>시가총액</th><td>약1조 1,246억</td></tr>
+		<tr><th>자본총계</th><td>2,483억</td></tr>
+		<tr><th>매출액</th><td>2,073억</td></tr>
+		<tr><th>영업이익</th><td>229억</td></tr>
+		<tr><th>순이익</th><td>420억</td></tr>
+		<tr><th>자산총액</th><td>3,274억</td></tr>
+		<tr><th>부채총액</th><td>791억</td></tr>
+		<tr><th>직원 수</th><td>1,241명</td></tr>
+		<tr><th>소재지</th><td>경기도 성남시 분당구 판교역로 220</td></tr>
+	</table>
+  </body>
+</html>

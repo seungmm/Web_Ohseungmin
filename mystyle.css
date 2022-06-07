@@ -1,0 +1,146 @@
+/*메뉴바 CSS*/
+.menu {
+  width: 1500px;
+  overflow: hidden;
+  margin: 20px auto;
+  list-style:none;
+}
+.menu > li {
+  width: 20%;
+  float: left;
+  text-align: center;
+  line-height: 40px;
+  background-color: #5778ff;
+  list-style:none;
+  border-radius: 10px 10px 10px 10px;
+}
+.menu a {
+  text-shadow: 0.5px 0.5px 2px black;
+  color: #fff;
+  text-decoration-line: none;
+}
+.submenu a {
+  text-shadow: 0.5px 0.5px 2px orange;
+  color: #fff;
+  text-decoration-line: none;
+}
+.submenu > li {
+  line-height: 50px;
+  text-align: left;
+  padding-left: 80px;
+  background-color: #94a9ff;
+  list-style:none;
+  border-radius: 0px 0px 10px 0px;
+}
+.submenu {
+  height: 0; 
+  overflow: hidden;
+}
+.menu > li:hover {
+  background-color: #94a9ff;
+  transition-duration: 0.5s;
+}
+.menu > li:hover .submenu {
+  height: auto;
+  transition-duration: 1s;
+}
+/*홈페이지 내용이 들어갈 div*/
+.div{
+  width: 1000px ; 
+  height: 750px; 
+  margin-left: 80px; 
+  display: none;
+}
+/*.div 내에 작성되는 p태그에 사용되는 CSS */
+.content{
+  width: 1000px; 
+  height: auto; 
+  background-color: rgba(100,150,150,0.2);
+  border-radius: 10px 10px 10px 10px;
+  padding: 20px;
+  box-shadow: 10px 10px 13px -7px #000000;
+}
+
+/*summary태그 CSS*/
+summary{
+  width: 200px;
+  height: auto;
+  margin-bottom: 3px;
+  text-shadow: 2px 2px 3px #CCCCCC;
+  font-size: 18px;
+}
+/*details태그 CSS*/
+details{
+  margin-top: 10px;
+}
+/*이미지에 마우스 올리면 커지는 동적변화*/
+.img1{
+      width: 200px;
+      height: 200px;
+      transition: 2s;
+    }
+.img1:hover{
+      width: 100%;
+      height: 100%;
+    }
+/*.div내에 span태그 CSS*/
+.div span{
+  width:65%;
+  display: inline-block;
+  background-color: rgba(100,150,150,0.2);
+  border-radius: 10px 10px 10px 10px;
+  padding: 20px;
+  box-shadow: 10px 10px 13px -7px #000000;
+}
+/*메인화면 div태그 CSS*/
+.maindiv{
+  width: 1500px;
+  margin-left: 150px;
+  margin-top: 50px;
+}
+/*메인화면 div태그안의 span태그 CSS*/
+.maindiv > span{
+  width: 43%;
+  height: 250px;
+  display: inline-block;
+  background-color: rgba(100,150,150,0.1);
+  border-radius: 10px 10px 10px 10px;
+  margin-right: 50px;
+  padding: 20px;
+  box-shadow: 10px 10px 13px -7px #000000;
+}
+.maindiv > span > center > h2{
+  text-shadow: 7px 6px 1px #CCCCCC;
+}
+.logo{
+  width: 15%;
+  height: 15%;
+  display: block;
+  margin: 0px auto;
+}
+.maindiv hr{
+  height: 3px;
+  background: #ccc;
+}
+.div div{
+  display: inline-block;
+}
+.image{
+  width: 300px;
+  height: 400px;
+}
+#table{
+  border: solid;
+  position: relative;
+  left: 1250px;
+  bottom: 700px;
+  display: none;
+}
+th{
+  background-color: #5050FF;
+  color: #fff;
+  height: 30px;
+}
+td{
+  border: 1px solid;
+}
